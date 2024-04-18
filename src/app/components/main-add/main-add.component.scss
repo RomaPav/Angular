@@ -1,0 +1,55 @@
+main{
+    min-height: 750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+.conteiner {
+    width: 30%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .conteiner input, select{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .add {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6347;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .add:hover {
+    background-color: #d23e24;
+  }
+
+
+  @media (min-width: 700px)  {
+    .conteiner {
+      width: 30%;
+    }
+  }
+  
+  @media (min-width: 400px) and (max-width: 700px) {
+    .conteiner {
+      width: 60%;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .conteiner {
+      width: 80%;
+    }
+  }

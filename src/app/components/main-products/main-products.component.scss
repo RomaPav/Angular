@@ -1,0 +1,108 @@
+main{
+    min-height: 750px;
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.container{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-rows: repeat(1,1fr);
+    grid-template-columns: repeat(3,1fr); 
+    justify-content: space-s;
+    gap: 20px; 
+    row-gap: 10px;
+}
+
+
+
+.filter {
+    width: 70%; 
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .filter h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .filter-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .filter-options label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .filter-options select {
+    width: calc(33% - 10px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+    appearance: none;
+}
+.filter-button {
+    width: 20%; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (min-width: 1080px) {
+    .filter {
+      width: 70%; 
+    }
+  }
+  
+  @media (min-width: 700px) and (max-width: 1080px) {
+    .filter {
+      width: 70%;
+    }
+  }
+  
+  @media (min-width: 400px) and (max-width: 700px) {
+    .filter-options {
+      flex-direction: column; 
+    }
+  
+    .filter-options select {
+      width: 100%; 
+      margin-bottom: 5px; 
+    }
+  
+    .filter-button {
+      width: 100%; 
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .filter {
+      width: 80%; 
+    }
+    .filter-options select {
+      width: 100%; 
+      margin-bottom: 5px; 
+    }
+    .filter-options {
+      flex-direction: column; 
+    }
+    .filter-button {
+      width: 100%; 
+    }
+  }

@@ -1,0 +1,39 @@
+<main>
+    <div class="filter">
+        <h2>Фільтри</h2>
+        <div class="filter-options">
+            <label for="category-select">Категорія:</label>
+            <select id="category-select" [(ngModel)]="category">
+                <option value="none"></option>
+                <option *ngFor="let category of categories" value="{{category}}">{{category}}</option>
+            </select>
+
+            <label for="limit-select">Ліміт:</label>
+            <select id="limit-select"  [(ngModel)]="limit">
+                <option value="none"></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+
+            <label for="sorting-select">Сортувати:</label>
+            <select id="sorting-select" [(ngModel)]="sorting">
+                <option  value="none"></option>
+                <option  value="asc">Зростання</option>
+                <option  value="desc">Спадання</option>
+            </select>
+            <button class="filter-button" (click)="filter()">Застосувати</button>
+        </div>
+        
+    </div>
+    <div class="container" >
+        <app-product  *ngFor="let product of products" [id]="product.id" [title]="product.title" [price]="product.price" [img]="product.image" [description]="product.description"/>
+    </div>
+</main>

@@ -1,0 +1,16 @@
+<main>
+    <div class="conteiner">
+        <p *ngIf="showMessage" class="error">Fill in all fields correctly</p>
+        <form (ngSubmit)="add()" [formGroup]="addProduct">
+            
+            <input  type="text" formControlName="img" required  placeholder="link to the image" />
+            <input  type="text" formControlName="title" required placeholder="title"/>
+            <input  type="number" min="1" formControlName="price" required placeholder="price" />
+            <select formControlName="category" class="category" >
+                <option *ngFor="let categoryItem of categories" required value="{{categoryItem}}">{{categoryItem}}</option>
+            </select>
+            <input  type="text" formControlName="description" required placeholder="description" />
+            <button class="add"  type="submit">додати</button>
+        </form>
+    </div>
+</main>
